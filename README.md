@@ -25,4 +25,4 @@ g3.onClick(e => {
 ```
 #### Result:
 
-![Preview image](/assets/preview.png)
+![Preview image](/assets/example.png)
