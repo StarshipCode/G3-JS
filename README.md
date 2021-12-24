@@ -80,7 +80,7 @@ Example code:
 
 #### Clipping next image (100 x 100):
 
-![Exampleimage](/assets/example 2.png)
+![Example image](/assets/example2.png)
 
 ```js
     let clipX = 0
@@ -91,4 +91,5 @@ Example code:
     Sprite.clip(clipX, clipY, clipWidth, clipHeight)
 ```
 #### Result:
-![Exampleimage 2](/assets/example 3.png)
+
+![Example image 2](/assets/example3.png)
