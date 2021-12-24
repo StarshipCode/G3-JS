@@ -6,7 +6,7 @@ const g3 = new G3()
 
 const Window = g3.createWindow("Window1", 700, 700)
 
-const mineSprite = new g3.Sprite(g3.getImage("./download.png"), 0, 0, Window.context)
+const mineSprite = new g3.Sprite(g3.getImage("./texture.png"), 0, 0, Window.context)
 
 Window.background = "#373"
 
