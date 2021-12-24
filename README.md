@@ -1,6 +1,6 @@
 # G3 Javascript
-Javascript engine to make fast games. 
-#### Example code below:
+Basic javascript engine to make fast games. 
+#### Example code:
 ```js
 const g3 = new G3()
 
@@ -27,10 +27,68 @@ loop()
 
 - onKeydown
 ```js
-const g3 = new G3()
-//Click events
-g3.onClick(e => {
+g3.onKeydown(e => {
     console.log("Hello")
 })
 ```
 - onClick
+```js
+g3.onClick(e => {
+    console.log("Hello")
+})
+```
+#### General event listener:
+
+```js
+g3.watchEvent("keydown", e => {
+    console.log("Hello")
+})
+```
+
+#### Create window (canvas):
+
+```js
+let name = "Window1"
+let width = 700 // px
+let height = 700 // px
+
+g3.createWindow(name, width, height)
+```
+
+#### getImage :
+Returns an Image instance
+
+```js
+let src = "./example.png"
+let image = g3.getImage(src)
+```
+
+## Sprite methods and properties
+
+Example code:
+```js
+   let Window = g3.createWindow("Window", 700, 700)
+
+   let x = 0
+   let y = 0
+   let image = g3.getImage("./example.png")
+   
+   let Sprite = new g3.Sprite(image, x, y, Window.context)
+```
+
+####  Clip method:
+
+#### Clipping next image (100 x 100):
+
+![Exampleimage](/assets/example 2.png)
+
+```js
+    let clipX = 0
+    let clipY = 0
+    let clipWidth = 50
+    let clipHeight = 50
+    
+    Sprite.clip(clipX, clipY, clipWidth, clipHeight)
+```
+#### Result:
+![Exampleimage 2](/assets/example 3.png)
