@@ -2,6 +2,7 @@
 Basic javascript engine to make fast games. 🕹️
 #### Example code:
 ```js
+
 const g3 = new G3()
 
 const Window = g3.createWindow("Window1", 700, 700)
@@ -27,12 +28,14 @@ loop()
 
 - onKeydown
 ```js
+
 g3.onKeydown(e => {
     console.log("Hello")
 })
 ```
 - onClick
 ```js
+
 g3.onClick(e => {
     console.log("Hello")
 })
@@ -40,6 +43,7 @@ g3.onClick(e => {
 #### General event listener:
 
 ```js
+
 g3.watchEvent("keydown", e => {
     console.log("Hello")
 })
@@ -59,6 +63,7 @@ g3.watchEvent("keydown", e => {
 #### createWindow():
 
 ```js
+
 let name = "Window1"
 let width = 700 // px
 let height = 700 // px
@@ -70,6 +75,7 @@ g3.createWindow(name, width, height)
 Returns an Image instance
 
 ```js
+
 let src = "./example.png"
 let image = g3.getImage(src)
 ```
@@ -78,8 +84,8 @@ let image = g3.getImage(src)
 
 Example code:
 ```js
-   let Window = g3.createWindow("Window", 700, 700)
 
+   let Window = g3.createWindow("Window", 700, 700)
    let x = 0
    let y = 0
    let image = g3.getImage("./example.png")
@@ -94,6 +100,7 @@ Clipping next image (100 x 100):
 ![Example image](/assets/example2.png)
 
 ```js
+
     let clipX = 0
     let clipY = 0
     let clipWidth = 50
