@@ -18,11 +18,19 @@ function loop() {
 }
 
 loop()
-
-g3.onClick(e => {
-    console.log("Hello")
-})
 ```
 #### Result:
 
 ![Preview image](/assets/example.png)
+
+#### Supported events:
+
+- onKeydown
+```js
+const g3 = new G3()
+//Click events
+g3.onClick(e => {
+    console.log("Hello")
+})
+```
+- onClick
