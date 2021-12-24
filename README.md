@@ -1,5 +1,5 @@
 # G3 Javascript
-Basic javascript engine to make fast games. 
+Basic javascript engine to make fast games. 🕹️
 #### Example code:
 ```js
 const g3 = new G3()
