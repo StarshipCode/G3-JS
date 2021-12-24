@@ -44,8 +44,19 @@ g3.watchEvent("keydown", e => {
     console.log("Hello")
 })
 ```
+#### Key constants
+- g3.KEY.DOWN_ARROW
+- g3.KEY.UP_ARROW
+- g3.KEY.LEFT_ARROW
+- g3.KEY.RIGHT_ARROW
+- g3.KEY.W
+- g3.KEY.A
+- g3.KEY.S
+- g3.KEY.D
+- g3.KEY.ENTER
+- g3.KEY.SPACE
 
-#### Create window (canvas):
+#### createWindow():
 
 ```js
 let name = "Window1"
@@ -55,7 +66,7 @@ let height = 700 // px
 g3.createWindow(name, width, height)
 ```
 
-#### getImage :
+#### getImage() :
 Returns an Image instance
 
 ```js
@@ -76,9 +87,9 @@ Example code:
    let Sprite = new g3.Sprite(image, x, y, Window.context)
 ```
 
-####  Clip method:
+####  clip():
 
-#### Clipping next image (100 x 100):
+Clipping next image (100 x 100):
 
 ![Example image](/assets/example2.png)
 
@@ -90,6 +101,6 @@ Example code:
     
     Sprite.clip(clipX, clipY, clipWidth, clipHeight)
 ```
-#### Result:
+Result:
 
 ![Example image 2](/assets/example3.png)
