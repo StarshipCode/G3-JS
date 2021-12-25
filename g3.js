@@ -135,4 +135,18 @@ function G3() {
     this.onKeyup = (callback) => {
         document.addEventListener("keyup", callback)
     }
+    //Save an load functions
+    this.saveData = (key, objectData = {}) => {
+        objectData = JSON.stringify(objectData)
+        localStorage.setItem(key, objectData)
+    }
+    this.loadData = (key) => {
+        let objectData = JSON.parse(localStorage.getItem(key))
+        return objectData
+    }
+    this.maths = {
+        distanceBetweenPoints(x1, y1, x2, y2) {
+            return Math.sqrt(Math.pow(x2 - x2, 2)+Math.pow(y2 - y1, 2))
+        }
+    }
 }
