@@ -34,7 +34,8 @@ function G3() {
     this.G3_WINDOW = function (element, name) {
         //Element
         this.e = element
-
+        //Full screen
+        this.fullScreen = false
         //Background color
         this.background = "#fff"
         //Window name
@@ -49,7 +50,6 @@ function G3() {
             this.context.fillRect(x, y, w, h)
             this.context.fillStyle = "black"
         }
-
         //Clear the display
         this.clear = () => {
             this.context.clearRect(0, 0, this.e.width, this.e.height)
@@ -57,7 +57,15 @@ function G3() {
             this.context.fillRect(0, 0, this.e.width, this.e.height)
             this.context.fillStyle = "black"
         }
-
+        //Update display
+        this.update = () => {
+            //resize canvas to fullscreen
+            if (this.fullScreen == true) {
+                this.e.width = innerWidth
+                this.e.height = innerHeight
+            }
+            this.clear()
+        }
         //Arc
         this.arc = (x, y, radius, startAngle, endAngle, color, fill = true, anticlockwise = false) => {
             this.context.beginPath()
@@ -88,12 +96,16 @@ function G3() {
         //Get canvas
         const e = document.getElementById(name)
 
-        //Resize canvas
-        e.width = width
-        e.height = height
-
         //Instance the window object
         const object = new this.G3_WINDOW(e, name)
+
+        //Resize canvas
+        if (width == "full")
+            object.fullScreen = true
+        else {
+            e.width = width
+            e.height = height
+        }
 
         //Return window
         return object
@@ -111,13 +123,16 @@ function G3() {
         "D": 68,
     }
     //General events
-    this.watchEvent = (event, callback)=>{
-        document.addEventListener(event,callback)
+    this.watchEvent = (event, callback) => {
+        document.addEventListener(event, callback)
     }
-    this.onKeydown = (callback) =>{
+    this.onKeydown = (callback) => {
         document.addEventListener("keydown", callback)
     }
-    this.onClick = (callback) =>{
+    this.onClick = (callback) => {
         document.addEventListener("click", callback)
+    }
+    this.onKeyup = (callback) => {
+        document.addEventListener("keyup", callback)
     }
 }
