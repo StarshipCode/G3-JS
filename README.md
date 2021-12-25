@@ -12,7 +12,7 @@ const mineSprite = new g3.Sprite(g3.getImage("./texture.png"), 0, 0, Window.cont
 Window.background = "#373"
 
 function loop() {
-    Window.clear()
+    Window.update()
     Window.fillRect(400, 400, 20, 20, "#fff")
     mineSprite.draw()
     requestAnimationFrame(loop)
@@ -40,6 +40,13 @@ g3.onClick(e => {
     console.log("Hello")
 })
 ```
+
+- onKeyup
+```js
+g3.onKeyup(e => {
+    console.log("Hello")
+})
+```
 #### General event listener:
 
 ```js
@@ -62,6 +69,7 @@ g3.watchEvent("keydown", e => {
 
 #### createWindow():
 
+If your canvas must have an specific width and height use this example:
 ```js
 
 let name = "Window1"
@@ -70,7 +78,13 @@ let height = 700 // px
 
 g3.createWindow(name, width, height)
 ```
+If you want a fullscreen canvas:
+```js
 
+let name = "Window1"
+
+g3.createWindow(name, "full")
+```
 #### getImage() :
 Returns an Image instance
 
@@ -141,6 +155,16 @@ let fill = false // false to stroke rect and true to fill. By default fill is se
 let anticlockwise = false // By default is set to false
 
 Window.arc(x , y, radius, startAngle, endAngle, color, fill, anticlockwise)
+```
+
+#### update():
+This method clear the display and resize canvas to fullscreen if you set the size to "full" in createWindow()
+```js
+function loop(){
+    Window.update()
+    requestAnimationFrame(loop)
+}
+loop()
 ```
 ## Window properties:
 
