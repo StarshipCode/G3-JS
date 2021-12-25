@@ -111,3 +111,41 @@ Clipping next image (100 x 100):
 Result:
 
 ![Example image 2](/assets/example3.png)
+## Window methods:
+#### clear():
+Clear the canvas for the next frame.
+```js
+Window.clear()
+```
+
+#### fillRect():
+Fill's a rectangle in x and y position with an specific width and height.
+```js
+let x = 0
+let y = 0
+let width = 70
+let height = 70
+
+Window.fillRect(x, y, width, height)
+```
+#### arc():
+With this method you can choose whether to fill or draw an arc.
+```js
+let x = 0
+let y = 0
+let radius = 10
+let startAngle = 0
+let endAngle = Math.PI * 2 // 360°
+let color = "#fff"
+let fill = false // false to stroke rect and true to fill. By default fill is set true.
+let anticlockwise = false // By default is set to false
+
+Window.arc(x , y, radius, startAngle, endAngle, color, fill, anticlockwise)
+```
+## Window properties:
+
+#### background
+Fill's the background of the canvas with an specific color.
+```js
+Window.background = "#faf"
+```
