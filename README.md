@@ -93,7 +93,46 @@ Returns an Image instance
 let src = "./example.png"
 let image = g3.getImage(src)
 ```
+#### saveData():
+This method save an object to localStorage that you can load using the loadData() method. You can usit to save games.
+```js
+let key = "Save 1"
 
+let object = {
+    name:"Gamer",
+    age:17,
+    speed:100,
+    inventory:["Apple", "Backpack"]
+}
+g3.saveData(key, object)
+```
+#### loadData():
+Following the last example of saveData()
+```js
+let key = "Save 1"
+
+let object = g3.loadData(key)
+
+console.log(object)
+```
+```
+Output: {
+    name:"Gamer",
+    age:17,
+    speed:100,
+    inventory:["Apple", "Backpack"]
+}
+```
+
+#### maths object methods and properties:
+```js
+let x1 = 0
+let y1 = 0
+let x2 = 10
+let y2 = 10
+
+g3.maths.distanceBetweenPoints(x1, y1, x2, y2) 
+```
 ## Sprite methods and properties
 
 Example code:
@@ -173,3 +212,4 @@ Fill's the background of the canvas with an specific color.
 ```js
 Window.background = "#faf"
 ```
+
