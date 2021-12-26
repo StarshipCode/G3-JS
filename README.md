@@ -136,7 +136,7 @@ const y2 = 10
 g3.maths.distanceBetweenPoints(x1, y1, x2, y2) 
 ```
 #### toRadians():
-convert from degrees to radians
+Convert from degrees to radians
 ```js
 const degrees = 360
 
