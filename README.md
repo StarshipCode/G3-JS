@@ -124,14 +124,23 @@ Output: {
 }
 ```
 
-#### maths object methods and properties:
+## maths object methods and properties:
+
+#### distanceBetweenPoints():
 ```js
-let x1 = 0
-let y1 = 0
-let x2 = 10
-let y2 = 10
+const x1 = 0
+const y1 = 0
+const x2 = 10
+const y2 = 10
 
 g3.maths.distanceBetweenPoints(x1, y1, x2, y2) 
+```
+#### toRadians():
+Convert from degrees to radians
+```js
+const degrees = 360
+
+g3.maths.toRadians(degrees)
 ```
 ## Sprite methods and properties
 
@@ -195,7 +204,18 @@ let anticlockwise = false // By default is set to false
 
 Window.arc(x , y, radius, startAngle, endAngle, color, fill, anticlockwise)
 ```
+#### line():
+Stroke a line 
+```js
+let x1 = 0
+let y1 = 0
+let x2 = 0
+let y2 = 0
+let color = "#fff" // Optional. By default #fff
+let lineWidth = 2 // This an optional argument. By default is set 1
 
+Window.line(x1, y1, x2, y2, color, lineWidth)
+```
 #### update():
 This method clear the display and resize canvas to fullscreen if you set the size to "full" in createWindow()
 ```js
